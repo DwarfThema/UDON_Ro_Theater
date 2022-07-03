@@ -7,14 +7,19 @@ using UnityEngine.UI;
 
 public class SpotSlider : UdonSharpBehaviour
 {
-    public Animator spotAnim;
+    public Animator[] spotAnim;
+    public int poolSize = 10;
+
     public string SpotLightParam;
     public Slider slider;
     [UdonSynced, SerializeField] float sliderValue;
 
     public void spotSlider()
     {
-        spotAnim.SetFloat(SpotLightParam, slider.value);
+        for(int i = 0; i <poolSize; ++i)
+        {
+            spotAnim[i].SetFloat(SpotLightParam, slider.value);
+        }
         sliderValue = slider.value;
         RequestSerialization();
     }

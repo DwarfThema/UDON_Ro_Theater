@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
-  m_Name: Udon
+  m_Name: Udon_CurtainButton_Button
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: c8efab1ac9616734caffc50c9d026662,
     type: 2}
@@ -257,7 +257,7 @@ MonoBehaviour:
     uid: eba4d2ba-ce9b-4d20-b450-0bf324623859
     jsonData: '{"uid":"eba4d2ba-ce9b-4d20-b450-0bf324623859","layout":{"serializedVersion":"2","x":712.0000610351563,"y":208.0,"width":656.0,"height":350.0},"containedElements":["310b1a40-7bd2-4dc4-9990-b18e20b6c69b","14094080-8291-4b21-bccf-b61c786437c2","6febfcb8-7c72-4060-9aa9-3f9209e3055f","c9b6c070-1633-4a42-89d7-6ff3af55ec14"],"title":"NetWork_Deserialization","layer":0,"elementTypeColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}'
   viewTransform:
-    position: {x: 200, y: 179.42857}
-    scale: 0.49717674
+    position: {x: -260.66666, y: -20}
+    scale: 0.8695652
   version: 1.0.0
   showAssembly: 0
