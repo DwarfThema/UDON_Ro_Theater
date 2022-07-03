@@ -309,6 +309,24 @@ MonoBehaviour:
       - unityObjectValue: {fileID: 0}
         stringValue: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null|{"x":0.0,"y":0.0,"z":0.0}
+    - fullName: VRCInstantiate.__Instantiate__UnityEngineGameObject__UnityEngineGameObject
+      uid: 5153d487-67a9-4b50-95c1-c242de681e31
+      position: {x: -717.10266, y: -777.54504}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3ComponentsVRCObjectPool.__get_transform__UnityEngineTransform
+      uid: 3793c929-e659-4dce-be17-acfea80f4ad7
+      position: {x: -901.69574, y: -951.73926}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
     updateOrder: 0
   graphElementData:
   - type: 2
@@ -334,7 +352,7 @@ MonoBehaviour:
     uid: dd099afa-04a3-413a-b572-f7670acebb86
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":20.0,"width":0.0,"height":0.0}}'
   viewTransform:
-    position: {x: 1126.2573, y: 551.0502}
-    scale: 0.7561437
+    position: {x: 1496, y: 1216.6666}
+    scale: 1.15
   version: 1.0.0
   showAssembly: 0
