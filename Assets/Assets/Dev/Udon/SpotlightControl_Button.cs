@@ -11,7 +11,7 @@ public class SpotlightControl_Button : UdonSharpBehaviour
 
     public bool isOn = true;
 
-    [UdonSynced, SerializeField] bool netWorkBool = true;
+    [UdonSynced, SerializeField] bool netWorkBool;
 
 
     public override void Interact()
@@ -20,8 +20,8 @@ public class SpotlightControl_Button : UdonSharpBehaviour
         {
             bool unaryNegation = !light[i].activeSelf;
             light[i].SetActive(unaryNegation);
-            netWorkBool = light[i].activeSelf;
         }
+        netWorkBool = light[0].activeSelf;
         if (isOn)
         {
             isOn = !isOn;
