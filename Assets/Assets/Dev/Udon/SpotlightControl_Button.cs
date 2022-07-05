@@ -6,29 +6,40 @@ using VRC.Udon;
 
 public class SpotlightControl_Button : UdonSharpBehaviour
 {
-    public Animator[] anim;
+    public GameObject[] light;
+    public int lightPool;
 
-    public int poolSize = 18;
+    public bool isOn = true;
 
     [UdonSynced, SerializeField] bool netWorkBool = true;
 
 
     public override void Interact()
     {
-        for (int i = 0; i < poolSize; ++i)
+        for(int i = 0; i < lightPool; ++i)
         {
-            bool unaryNegation = !anim[i].GetBool("SpotLightToggle");
-            anim[i].SetBool("SpotLightToggle", unaryNegation);
-            netWorkBool = unaryNegation;
+            bool unaryNegation = !light[i].activeSelf;
+            light[i].SetActive(unaryNegation);
+            netWorkBool = light[i].activeSelf;
+        }
+        if (isOn)
+        {
+            isOn = !isOn;
+            gameObject.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
+        }
+        else
+        {
+            isOn = !isOn;
+            gameObject.GetComponent<MeshRenderer>().materials[0].color = new Color(0, 180 / 255f, 0);
         }
         
         RequestSerialization();
     }
     public override void OnDeserialization()
     {
-        for (int i = 0; i < poolSize; ++i)
+        for(int i = 0; i < lightPool; ++i)
         {
-            anim[i].SetBool("SpotLightToggle", netWorkBool);
+            light[i].SetActive(netWorkBool);
         }
     }
 }
